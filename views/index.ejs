@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Three Js Template</title>
+        <link rel="stylesheet" href="./stylesheets/style.css">
+    </head>
+    <body>
+
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" id="closer">&times;</a>
+          
+            <!-- Overlay content -->
+            <canvas class="web-gl"></canvas>
+          
+        </div>
+
+        <div class="world-map" id="wm">
+            <img src="/images/worldmap.png" alt="map"/>
+            <div class="pin usa opener" id="env1">
+                <span>United states</span>
+            </div>
+            <div class="pin france opener" id="env2">
+                <span>France</span>
+            </div>
+            <div class="pin sweden opener" id="env3">
+                <span>Sweden</span>
+            </div>
+            <div class="pin south-africa opener" id="env4">
+                <span>South Africa</span>
+            </div>
+            <div class="pin brazil opener" id="env5">
+                <span>Brazil</span>
+            </div>
+        </div>
+
+        
+
+        <script type="importmap">
+            {
+                "imports":{
+                    "three": "./build/three.module.js",
+                    "three/examples/controls/OrbitControls": "./jsm/controls/OrbitControls.js"
+                }
+            }
+        </script>
+        <script type="module" src="./javascripts/client.js"></script>
+    </body>
+</html>
