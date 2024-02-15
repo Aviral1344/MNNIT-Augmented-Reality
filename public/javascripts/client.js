@@ -51,59 +51,63 @@ let textureArray = [];
 
 // all texture
 function textureCreator(folder){
+    let frontTexture = loader.load('./images/'+folder+'/front.jpg');
+    let backTexture = loader.load('./images/'+folder+'/back.jpg');
+    let topTexture = loader.load('./images/'+folder+'/top.jpg');
+    let bottomTexture = loader.load('./images/'+folder+'/bottom.jpg');
+    let rightTexture = loader.load('./images/'+folder+'/left.jpg');
+    let leftTexture = loader.load('./images/'+folder+'/right.jpg');
 
+    textureArray.push(new THREE.MeshBasicMaterial({map: frontTexture}));
+    textureArray.push(new THREE.MeshBasicMaterial({map: backTexture}));
+    textureArray.push(new THREE.MeshBasicMaterial({map: topTexture}));
+    textureArray.push(new THREE.MeshBasicMaterial({map: bottomTexture}));
+    textureArray.push(new THREE.MeshBasicMaterial({map: rightTexture}));
+    textureArray.push(new THREE.MeshBasicMaterial({map: leftTexture}));
+
+    for(let i=0; i<textureArray.length; i++){
+        textureArray[i].side = THREE.BackSide;
+    }
+
+    // making cube
+    const cubeGeometry = new THREE.BoxGeometry(100, 100, 100);
+    const skyBox = new THREE.Mesh(cubeGeometry, textureArray);
+    scene.add(skyBox);
+
+    // render function to render the scene
+    const render = ()=>{
+        renderer.render(scene, camera);
+    }
+
+    // Recursion function for animation
+    const animate = ()=>{
+        requestAnimationFrame(animate);
+        render();
+        stats.update();
+    }
+    animate();
+
+    // Resizing window to make responsive
+    const windowResize = ()=>{
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        render();
+    }
+
+    window.addEventListener('resize', windowResize, false);
 }
-let frontTexture = loader.load('./images/lobby/front.jpg');
-let backTexture = loader.load('./images/lobby/back.jpg');
-let topTexture = loader.load('./images/lobby/top.jpg');
-let bottomTexture = loader.load('./images/lobby/bottom.jpg');
-let rightTexture = loader.load('./images/lobby/left.jpg');
-let leftTexture = loader.load('./images/lobby/right.jpg');
 
-textureArray.push(new THREE.MeshBasicMaterial({map: frontTexture}));
-textureArray.push(new THREE.MeshBasicMaterial({map: backTexture}));
-textureArray.push(new THREE.MeshBasicMaterial({map: topTexture}));
-textureArray.push(new THREE.MeshBasicMaterial({map: bottomTexture}));
-textureArray.push(new THREE.MeshBasicMaterial({map: rightTexture}));
-textureArray.push(new THREE.MeshBasicMaterial({map: leftTexture}));
-
-for(let i=0; i<textureArray.length; i++){
-    textureArray[i].side = THREE.BackSide;
-}
-
-// making cube
-const cubeGeometry = new THREE.BoxGeometry(100, 100, 100);
-const skyBox = new THREE.Mesh(cubeGeometry, textureArray);
-scene.add(skyBox);
-
-// render function to render the scene
-const render = ()=>{
-    renderer.render(scene, camera);
-}
-
-// Recursion function for animation
-const animate = ()=>{
-    requestAnimationFrame(animate);
-    render();
-    stats.update();
-}
-animate();
-
-// Resizing window to make responsive
-const windowResize = ()=>{
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    render();
-}
-
-window.addEventListener('resize', windowResize, false);
 
 
 
 const open = document.querySelectorAll(".opener")
 open.forEach(node =>{
+    
     node.addEventListener("click", ()=>{
+        const folder = node.classList[0];
+        console.log(folder);
+        textureCreator(folder);
         document.getElementById("myNav").style.width = "100%";
     })
 })
@@ -112,4 +116,5 @@ open.forEach(node =>{
 const close = document.getElementById("closer")
 close.addEventListener("click", ()=>{
     document.getElementById("myNav").style.width = "0%";
+    textureArray = []
 })
