@@ -36,15 +36,39 @@ body{
     line-height: 27px;
 }
 
-.pin{
+/* .pin{
     background: #4362f8;
     position: absolute;
     width: 0.7em;
     height:  0.7em;
     border-radius: 50%;
     cursor: pointer;
+} */
+.map-marker {
+    position: absolute;
+    /* top: 60%; 
+    left: 40%;  */
+    /* transform: translate(-50%, -50%); */
+    width: 30px; /* Set the width of your marker */
+    height: 30px; /* Set the height of your marker */
+    background: url('https://cdn.jsdelivr.net/npm/leaflet/dist/images/marker-icon.png') center/contain no-repeat; /* Example marker icon from Leaflet library */
+    cursor: pointer;
 }
+  .tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+  }
 
+  /* Show tooltip on hover */
+  .map-marker:hover + .tooltip {
+    display: block;
+  }
 /* .pin ::before{
     content: '';
     background: #4362f8;
@@ -92,6 +116,10 @@ body{
     left: 48%;
 }
 
+.sweden{
+    top: 45%;
+    left: 70%;
+}
 .south-africa
 {
     top: 78%;
