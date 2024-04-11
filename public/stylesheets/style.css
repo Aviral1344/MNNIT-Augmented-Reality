@@ -8,20 +8,49 @@ body{
     font-family: sans-serif;
     background : #101224
 }
+.heading{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
 
-.world-map{
+/* .world-map{
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 1em;
     position: relative;
-}
+} */
 
-.world-map img{
-    width: 100%;
-    height: 100%;
+/* .row {
+    display: flex;
+  }
+  
+  .col {
+    flex: 30%;
+    padding: 5px;
+  }
+
+.col img{
+    width: 70%;
+    height: 70%;
     object-fit: contain;
-}
+} */
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  /* Style for each image */
+  .image-container img {
+    width: calc(50% - 20px); /* Adjust the width according to your preference */
+    margin: 10px; /* Adjust margin to create spacing between images */
+    padding: 10px; /* Adjust padding to create space around images */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
 
 .title{
     text-align: center;
@@ -35,7 +64,9 @@ body{
     margin: 1em auto;
     line-height: 27px;
 }
-
+.image{
+    align-items: center;
+}
 /* .pin{
     background: #4362f8;
     position: absolute;
@@ -208,4 +239,36 @@ body{
     position: absolute;
     top: 100px;
     right: 100px;
+}
+
+/* Container for the horizontal scrolling menu */
+.scrollmenu {
+    display: flex;
+    overflow-x: auto;
+    background-color: #e989c87e; /* Semi-transparent background color */
+}
+
+/* Individual items in the scrolling menu */
+.item {
+    flex: 0 0 auto; /* Set flex properties to control item sizing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 14px; /* Padding around each item */
+    text-align: center; /* Center the text within each item */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove default hyperlink styling */
+}
+
+/* Hover effect for items in the scrolling menu */
+.item:hover {
+    background-color: skyblue; /* Background color on hover */
+}
+
+/* Styling for the images within each item */
+.item img {
+    width: 500px; /* Adjust the width of the images as needed */
+    height: 500px; /* Adjust the height of the images as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    margin-right: 5px; /* Adjust spacing between images */
+    margin-left: 5px; /* Adjust spacing between images */
 }
