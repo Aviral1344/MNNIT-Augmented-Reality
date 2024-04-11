@@ -64,9 +64,12 @@ body{
     margin: 1em auto;
     line-height: 27px;
 }
-.image{
-    align-items: center;
+.imageTag{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
+
 /* .pin{
     background: #4362f8;
     position: absolute;
@@ -137,27 +140,68 @@ body{
     font-size: 0.9em;
 } */
 
-.usa{
-    top: 50%;
-    left: 21%;
+.SVBH{
+    top: 123%;
+    left: 52%;
+}
+.DEAN_OFFICE{
+    top: 119%;
+    left : 29%;
 }
 
-.france{
-    top: 45%;
-    left: 48%;
+.ATHLETICS{
+    top: 72%;
+    left: 40%;
 }
 
-.sweden{
-    top: 45%;
-    left: 70%;
+.ADMINISTRATION{
+    top: 133%;
+    left: 59.4%;
 }
-.south-africa
+.GYM
 {
-    top: 78%;
+    top: 24%;
+    left: 69.5%;
+}
+
+.ACADEMIC{
+    top: 123%;
+    left: 59.5%;
+}
+.WORKSHOP_LAB{
+    top: 36%;
+    left: 49.5%;
+}
+.TENNIS_COURT{
+    top: 68%;
+    left: 49%;
+}
+.MALVIYA{
+    top: 65%;
+    left: 64%;
+}
+
+.TILAK{
+    top: 82%;
+    left: 71%;
+}
+.PATEL
+{
+    top: 91%;
+    left: 76%;
+}
+
+.TANDON{
+    top: 79%;
+    left: 56%;
+}
+.KNGH
+{
+    top: 91%;
     left: 53%;
 }
 
-.brazil{
+.DJGH{
     top: 71%;
     left: 32%;
 }
