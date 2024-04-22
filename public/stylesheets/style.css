@@ -6,7 +6,7 @@
 body{
     margin : 0;
     font-family: sans-serif;
-    background : #101224
+    background : #101224;
 }
 .heading{
     text-align: center;
@@ -15,207 +15,16 @@ body{
     color: white;
 }
 
-/* .world-map{
+#map {
     width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1em;
-    position: relative;
-} */
-
-/* .row {
-    display: flex;
-  }
-  
-  .col {
-    flex: 30%;
-    padding: 5px;
-  }
-
-.col img{
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
-} */
-
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  
-  /* Style for each image */
-  .image-container img {
-    width: calc(50% - 20px); /* Adjust the width according to your preference */
-    margin: 10px; /* Adjust margin to create spacing between images */
-    padding: 10px; /* Adjust padding to create space around images */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  }
-
-.title{
-    text-align: center;
-    color: #fff;
-    margin: 2em 0;
-    padding: 0 1em;
+    height: 920px;
 }
 
-.title p{
-    max-width: 500px;
-    margin: 1em auto;
-    line-height: 27px;
+#street-view {
+    width: 50%;
+    height: 600px;
+    float: right;
 }
-.imageTag{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-/* .pin{
-    background: #4362f8;
-    position: absolute;
-    width: 0.7em;
-    height:  0.7em;
-    border-radius: 50%;
-    cursor: pointer;
-} */
-.map-marker {
-    position: absolute;
-    /* top: 60%; 
-    left: 40%;  */
-    /* transform: translate(-50%, -50%); */
-    width: 30px; /* Set the width of your marker */
-    height: 30px; /* Set the height of your marker */
-    background: url('https://cdn.jsdelivr.net/npm/leaflet/dist/images/marker-icon.png') center/contain no-repeat; /* Example marker icon from Leaflet library */
-    cursor: pointer;
-}
-  .tooltip {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px;
-    border-radius: 5px;
-    display: none;
-  }
-
-  /* Show tooltip on hover */
-  .map-marker:hover + .tooltip {
-    display: block;
-  }
-/* .pin ::before{
-    content: '';
-    background: #4362f8;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    animation: 
-    pulse 1.3s ease-in-out infinite;
-} */
-.panorama-container{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-}
-/* .pin span{
-    display: inline-block;
-    white-space: nowrap;
-    position: absolute;
-    left: 1.5em;
-    top: 50%;
-    transform: translate(-50%);
-    background: #fff;
-    border-radius: 3em;
-    padding: 0.3em, 0.6em;
-    font-size: 0.9em;
-} */
-
-.SVBH{
-    top: 123%;
-    left: 52%;
-}
-.DEAN_OFFICE{
-    top: 119%;
-    left : 29%;
-}
-
-.ATHLETICS{
-    top: 72%;
-    left: 40%;
-}
-
-.ADMINISTRATION{
-    top: 133%;
-    left: 59.4%;
-}
-.GYM
-{
-    top: 24%;
-    left: 69.5%;
-}
-
-.ACADEMIC{
-    top: 123%;
-    left: 59.5%;
-}
-.WORKSHOP_LAB{
-    top: 36%;
-    left: 49.5%;
-}
-.TENNIS_COURT{
-    top: 68%;
-    left: 49%;
-}
-.MALVIYA{
-    top: 65%;
-    left: 64%;
-}
-
-.TILAK{
-    top: 82%;
-    left: 71%;
-}
-.PATEL
-{
-    top: 91%;
-    left: 76%;
-}
-
-.TANDON{
-    top: 79%;
-    left: 56%;
-}
-.KNGH
-{
-    top: 91%;
-    left: 53%;
-}
-
-.DJGH{
-    top: 71%;
-    left: 32%;
-}
-
-
-@keyframes pulse{
-    100%{
-        opacity: 0;
-        transform: 
-        translate(-50%, -50%)
-        scale(2.5);
-    }
-}
-
 @media screen and (max-width: 600px){
     .world-map{
         font-size: 13px;
@@ -283,36 +92,4 @@ body{
     position: absolute;
     top: 100px;
     right: 100px;
-}
-
-/* Container for the horizontal scrolling menu */
-.scrollmenu {
-    display: flex;
-    overflow-x: auto;
-    background-color: #e989c87e; /* Semi-transparent background color */
-}
-
-/* Individual items in the scrolling menu */
-.item {
-    flex: 0 0 auto; /* Set flex properties to control item sizing */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    padding: 14px; /* Padding around each item */
-    text-align: center; /* Center the text within each item */
-    color: white; /* Text color */
-    text-decoration: none; /* Remove default hyperlink styling */
-}
-
-/* Hover effect for items in the scrolling menu */
-.item:hover {
-    background-color: skyblue; /* Background color on hover */
-}
-
-/* Styling for the images within each item */
-.item img {
-    width: 500px; /* Adjust the width of the images as needed */
-    height: 500px; /* Adjust the height of the images as needed */
-    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
-    border-radius: 8px; /* Add border-radius for rounded corners */
-    margin-right: 5px; /* Adjust spacing between images */
-    margin-left: 5px; /* Adjust spacing between images */
 }

@@ -17,22 +17,7 @@ app.listen(3000, ()=>{
     console.log('visit http://localhost:3000/');
 });
 
-app.get("/boysHostel", (req, res)=>{
-    res.render("boysHostel.ejs")
-})
-
-app.get("/academic", (req, res)=>{
-    res.render("academic.ejs")
-})
-
-app.get("/girlsHostel", (req, res)=>{
-    res.render("girlsHostel.ejs")
-})
-
-app.get("/csed", (req, res)=>{
-    res.render("csed.ejs")
-})
 
 app.get("/", (req, res) =>{
-    res.render("index.ejs");
+    res.render("map.ejs");
 })
