@@ -3,7 +3,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXZpMTM0NCIsImEiOiJjbHY3eGIwcHIwYzE5MmxxaWwyM
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-v9', // Use a Mapbox style
-    center: [81.86275619216651, 25.492636748260814], // Example: San Francisco, CA
+    center: [81.86275, 25.49263], // Example: San Francisco, CA
     zoom: 17, // Adjust the initial zoom level as needed
     //pitch: 20, // Set the pitch to 45 degrees (tilted view)
      //bearing: -17.6,
@@ -22,22 +22,51 @@ map.on('load', function () {
                 type: 'Feature',
                 geometry: {
                     type: 'Point',
-                    coordinates: [81.86277960100595, 25.494189023219338] // MNNIT Allahabad coordinates (example)
+                    coordinates: [81.862511, 25.493633] // MNNIT Allahabad coordinates (example)
                 }
             }]
         }
     });
 
+    // map.addLayer({
+    //     id: 'marker',
+    //     type: 'circle',
+    //     source: 'marker',
+    //     paint: {
+    //         'circle-radius': 6,
+    //         'circle-color': '#FF0000', // White color
+    //         'circle-opacity': 0.6 // Adjust opacity as needed
+    //     }
+    // });
     map.addLayer({
-        id: 'marker',
+        id: 'outer-circle',
+        type: 'circle',
+        source: 'marker',
+        paint: {
+            'circle-radius': 10,
+            'circle-color': '#FFFFFF', // Red color
+            'circle-opacity': 0.6 // Adjust opacity as needed
+        }
+    });
+    
+    // Add the inner circle layer with a smaller radius to create a gap
+    map.addLayer({
+        id: 'inner-circle',
         type: 'circle',
         source: 'marker',
         paint: {
             'circle-radius': 6,
             'circle-color': '#FF0000', // White color
-            'circle-opacity': 0.6 // Adjust opacity as needed
+            'circle-opacity': 1 // Make inner circle fully opaque
         }
     });
+    function blinkMarker() {
+        var opacity = map.getPaintProperty('outer-circle', 'circle-opacity');
+        map.setPaintProperty('outer-circle', 'circle-opacity', opacity === 0 ? 0.6 : 0);
+    }
+    
+    // Call the animation function at intervals to make the marker blink
+    setInterval(blinkMarker, 500); // Adjust interval as needed (500ms for example)
 });
 
 /*
