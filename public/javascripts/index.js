@@ -100,20 +100,39 @@ data.forEach(coordinate => {
 
 var map = new mapboxgl.Map({
     container: 'map',
+<<<<<<< Updated upstream
     style: 'mapbox://styles/mapbox/satellite-v9', // Use a Mapbox style
     center: [81.86275, 25.49263], // Example: San Francisco, CA
+=======
+    style: 'mapbox://styles/mapbox/satellite-streets-v11', // Default style
+    center: [81.86275619216651, 25.492636748260814], // Example: San Francisco, CA
+>>>>>>> Stashed changes
     zoom: 17, // Adjust the initial zoom level as needed
-    //pitch: 20, // Set the pitch to 45 degrees (tilted view)
-     //bearing: -17.6,
     minZoom: 17, // Set the minimum zoom level
     maxZoom: 20, // Set the maximum zoom level
-    //maxBounds: [[81.86237518774574, 25.499090811760308], [81.87097578439969, 25.487767252192306]]
 });
 
+<<<<<<< Updated upstream
 
 data.forEach(coordinate => {
     lng = coordinate[1];
     lat = coordinate[0];
+=======
+map.on('load', function () {
+    map.addSource('marker', {
+        type: 'geojson',
+        data: {
+            type: 'FeatureCollection',
+            features: [{
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [81.86277960100595, 25.494189023219338] // MNNIT Allahabad coordinates (example)
+                }
+            }]
+        }
+    });
+>>>>>>> Stashed changes
 
     console.log(lng, lat);
     console.log();
@@ -146,6 +165,7 @@ data.forEach(coordinate => {
     });
 });
 
+<<<<<<< Updated upstream
 
 
 
@@ -155,6 +175,8 @@ map.on('click', 'marker', function() {
 });
 
 
+=======
+>>>>>>> Stashed changes
 map.on('click', 'marker', function(e) {
     var lat = e.lngLat.lat;
     var lng = e.lngLat.lng;
@@ -168,4 +190,30 @@ map.on('click', 'marker', function(e) {
         });
 });
 
+<<<<<<< Updated upstream
 */
+=======
+function changeMapStyle(style) {
+    map.setStyle('mapbox://styles/mapbox/' + style);
+}
+
+// document.getElementById('satellite-btn').addEventListener('click', function() {
+//     changeMapStyle('satellite-v9');
+// });
+
+document.getElementById('dark-btn').addEventListener('click', function() {
+    changeMapStyle('dark-v10');
+});
+
+document.getElementById('outdoors-btn').addEventListener('click', function() {
+    changeMapStyle('outdoors-v11');
+});
+
+document.getElementById('satellite-streets-btn').addEventListener('click', function() {
+    changeMapStyle('satellite-streets-v11');
+});
+
+// document.getElementById('satellite-streets-v10-btn').addEventListener('click', function() {
+//     changeMapStyle('satellite-streets-v10');
+// });
+>>>>>>> Stashed changes

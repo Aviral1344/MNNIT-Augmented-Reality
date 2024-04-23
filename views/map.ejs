@@ -1,18 +1,39 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Custom Clickable Markers with Mapbox GL JS</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0HSsnhb9LcoejUC7XxEx9m83F-T65EA&loading=async&callback=initializeMap" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&loading=async&callback=initializeMap" defer></script>
     <link href='./stylesheets/style.css' rel='stylesheet'/>
+    <style>
+        /* CSS for button styling */
+        .map-btn {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+        }
 
+        .map-btn:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+    </style>
 </head>
 <body>
     <div id='map'></div>
     <div id='street-view'></div>
-    <script src="./javascripts/index.js">
-    </script>
+    <button id="dark-btn" class="map-btn">Dark View</button>
+    <button id="outdoors-btn" class="map-btn">Outdoors View</button>
+    <button id="satellite-streets-btn" class="map-btn">Satellite-Streets View</button>
+    <script src="./javascripts/index.js"></script>
 </body>
 </html>
