@@ -101,7 +101,7 @@ data.forEach(coordinate => {
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-v9', // Use a Mapbox style
-    center: [81.86275619216651, 25.492636748260814], // Example: San Francisco, CA
+    center: [81.86275, 25.49263], // Example: San Francisco, CA
     zoom: 17, // Adjust the initial zoom level as needed
     //pitch: 20, // Set the pitch to 45 degrees (tilted view)
      //bearing: -17.6,
