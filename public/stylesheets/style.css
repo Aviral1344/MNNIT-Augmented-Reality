@@ -93,3 +93,23 @@ body{
     top: 100px;
     right: 100px;
 }
+
+
+.map-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.map-btn:hover {
+    background-color: #45a049; /* Darker Green */
+}
