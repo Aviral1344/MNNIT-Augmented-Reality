@@ -101,7 +101,7 @@ data.forEach((coordinate) => {
     document.getElementById("myNav").style.width = "100%";
     pannellum.viewer('panorama', {
       "type": "equirectangular",
-      "panorama": "./images/ganga_gate.jpg"
+      "panorama": "./images/"+locationName+".jpg"
     });
   });
 });
