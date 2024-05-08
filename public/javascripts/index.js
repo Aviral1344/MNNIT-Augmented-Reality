@@ -86,8 +86,8 @@ data.forEach((coordinate) => {
 
   // Add click event listener to each marker
   marker.getElement().addEventListener("click", function () {
-    // Show Street View panorama for the clicked location
-    document.getElementById("myNav").style.width = "100%";
+    /*
+    
     var panorama = new google.maps.StreetViewPanorama(
       document.getElementById("street-view"),
       {
@@ -96,6 +96,12 @@ data.forEach((coordinate) => {
         zoom: 1, // Adjust the zoom level of the panorama
       }
     );
+    */
+    document.getElementById("myNav").style.width = "100%";
+    pannellum.viewer('panorama', {
+      "type": "equirectangular",
+      "panorama": "./images/ganga_gate.jpg"
+    });
   });
 });
 

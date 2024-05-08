@@ -20,11 +20,13 @@ body{
     height: 920px;
 }
 
-#street-view {
-    width: 50%;
-    height: 600px;
-    
+
+#panorama{
+  height: 100%;
+  width: 100%;
 }
+
+
 @media screen and (max-width: 600px){
     .world-map{
         font-size: 13px;
@@ -52,8 +54,11 @@ body{
   
   /* Position the content inside the overlay */
   .overlay-content {
-    width: 100%; /* 100% width */
-    height: 100%;
+    position: absolute;
+    left: 12.5%;
+    top: 12.5%;
+    width: 75%; /* 100% width */
+    height: 75%;
   }
   
   /* The navigation links inside the overlay */
