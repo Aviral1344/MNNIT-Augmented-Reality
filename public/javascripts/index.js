@@ -2,43 +2,42 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiYXZpMTM0NCIsImEiOiJjbHY3eGIwcHIwYzE5MmxxaWwyMzFlcnN2In0.ssp6nnC-NbtxSad_qIaKfw";
 
 data = [
-    [25.4927569,81.8611763,"gangagate"],
-    [25.4927798,81.8615855,"STPI gate"],
-    [25.4936128,81.8620892,"administrative building"],
-    [25.49405,81.8616381,"mnnit logo"],
-    [25.4936284,81.8627548,"main academics gate"],
-    [25.4943278,81.862803,"biotech"],
-    [25.4943241,81.8623851,"yamuna cafe"],
-    [25.4943111,81.8616742,"yamuna gate"],
-    [25.4926551,81.862706,"dean academics chuaraha"],
-    [25.4923845,81.8627534,"dean academics"],
-    [25.492109,81.8627611,"design centre"],
-    [25.4917447,81.86277,"computer centre"],
-    [25.4910001,81.8627484,"svbh gate"],
-    [25.4910559,81.8633791,"computer department"],
-    [25.490954,81.8637774,"P.G. girl hostel"],
+    [25.4927569,81.8611763,"Ganga Gate"],
+    [25.4927798,81.8615855,"STPI Gate"],
+    [25.4936128,81.8620892,"Administrative Building"],
+    [25.49405,81.8616381,"Mnnit logo"],
+    [25.4936284,81.8627548,"Main Academics Gate"],
+    [25.4943278,81.862803,"Biotech Area"],
+    [25.4943241,81.8623851,"Yamuna Cafe"],
+    [25.4943111,81.8616742,"Yamuna Gate"],
+    [25.4926551,81.862706,"The Wall"],
+    [25.4923845,81.8627534,"Dean Academics"],
+    [25.492109,81.8627611,"Design Centre"],
+    [25.4917447,81.86277,"Computer Centre"],
+    [25.4910001,81.8627484,"SVBH Gate"],
+    [25.4910559,81.8633791,"Computer Department"],
+    [25.490954,81.8637774,"P.G. Girl Hostel"],
     [25.490831,81.8643536,"SMS"],
-    [25.4918483,81.8652504,"NCC BUILDING"],
-    [25.491872,81.8660697,"DEWSIS CAFE"],
-    [25.4922581,81.8663925,"M.P. HALL"],
-    [25.4929065,81.8664154,"GYMKHANA GROUND"],
-    [25.494265,81.8663642,"BOYS TUNNEL"],
+    [25.4918483,81.8652504,"NCC Building"],
+    [25.491872,81.8660697,"Dewsis Cafe"],
+    [25.4922581,81.8663925,"M.P. Hall"],
+    [25.4929065,81.8664154,"Gymkhana Ground"],
+    [25.494265,81.8663642,"Boys Hostel"],
     [25.4942795,81.8658614,"COURT 97"],
-    [25.4943038,81.8646349,"ATHLETICS GROUND TIRAHA"],
+    [25.4943038,81.8646349,"Atheletics Ground"],
     [25.4941223,81.8646656,"WORKSHOP LAB"],
-    [25.4932948,81.8646531,"CYCLE STAND"],
-    [25.4926427,81.8646301,"CAFE 96 CHAURAHA"],
+    [25.4932948,81.8646531,"Electrical Department Gate"],
+    [25.4926427,81.8646301,"I LOVE MNNIT"],
     [25.4922781,81.8646058,"CAFE 96"],
     [25.4926561,81.8642658,"CENTRAL LIBRARY"],
-    [25.4926716,81.8635362,"G.S. GATE ENRTY"],
-    [25.4942251,81.8673497,"TILAK HOSTEL PARK"],
+    [25.4926716,81.8635362,"South Gate Academic Area"],
+    [25.4942251,81.8673497,"Tilak Hostel Park"],
     [25.493726,81.86808,"PATEL GATE"],
-    [25.494488,81.8679231,"TILAK HOSTEL"],
-    [25.4947895,81.8684968,"MALVIYA HOSTEL"],
+    [25.494488,81.8679231,"Tilak Hostel"],
+    [25.4947895,81.8684968,"Malviya Hostel"],
     [25.4948826,81.8676815,"SAC"],
-    [25.4952753,81.8677309,"TANDON HOSTEL"],
-    [25.4963879,81.8681097,"TANDON GATE"],
-    [25.4961732,81.8685826,"NEW HOSTEL"]
+    [25.4952753,81.8677309,"Tandon Hostel"],
+    [25.4961732,81.8685826,"New Hostel"]
 ]
 
 
@@ -50,18 +49,21 @@ var map = new mapboxgl.Map({
   zoom: 17, // Adjust the initial zoom level as needed
   minZoom: 17, // Set the minimum zoom level
   maxZoom: 20, // Set the maximum zoom level
+  showAttribution: false
 });
+
 
 const popup = new mapboxgl.Popup({
   closeButton: false,
   closeOnClick: false,
 });
 
+
 // Add markers for each coordinate
 data.forEach((coordinate) => {
   var lng = coordinate[1];
   var lat = coordinate[0];
-  var locationName = "Administrative building";
+  var locationName = coordinate[2];
 
   var marker = new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
 
@@ -69,25 +71,23 @@ data.forEach((coordinate) => {
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = "pointer";
 
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
-    // while (Math.abs(e.lngLat.lng - lng) > 180) {
-    //   lng += e.lngLat.lng > lng ? 360 : -360;
-    // }
 
     // Populate the popup and set its coordinates based on the marker.
-    popup.setLngLat([lng, lat]).setHTML(locationName).addTo(map);
+    popup.setLngLat([lng , lat + 0.0001]).setHTML(locationName).addTo(map);
   });
 
+  
   marker.getElement().addEventListener("mouseleave", function () {
     map.getCanvas().style.cursor = "";
     popup.remove();
   });
 
+
+
   // Add click event listener to each marker
   marker.getElement().addEventListener("click", function () {
     // Show Street View panorama for the clicked location
+    document.getElementById("myNav").style.width = "100%";
     var panorama = new google.maps.StreetViewPanorama(
       document.getElementById("street-view"),
       {
@@ -98,6 +98,7 @@ data.forEach((coordinate) => {
     );
   });
 });
+
 
 const close = document.getElementById("closer");
 close.addEventListener('click', ()=> {
@@ -125,7 +126,3 @@ document
   .addEventListener("click", function () {
     changeMapStyle("satellite-streets-v11");
   });
-
-// document.getElementById('satellite-streets-v10-btn').addEventListener('click', function() {
-//     changeMapStyle('satellite-streets-v10');
-// });
