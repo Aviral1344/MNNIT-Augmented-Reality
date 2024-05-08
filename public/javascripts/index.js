@@ -41,6 +41,66 @@ data = [
     [25.4963879,81.8681097,"Tandon Gate"]
 ]
 
+scenes = {
+  'Ganga Gate' : {"type": "equirectangular", "panorama": "./images/Ganga Gate.jpg"},
+
+  'STPI Gate' : {"type": "equirectangular", "panorama": "./images/STPI Gate.jpg"}, 
+
+  'Administrative Building'  : {"type": "equirectangular", "panorama": "./images/Administrative Building.jpg"}, 
+
+  'Mnnit Logo' : {"type": "equirectangular", "panorama": "./images/Mnnit Logo.jpg"},
+
+  'Academic Building' : {"type": "equirectangular", "panorama": "./images/Academic Building.jpg"},
+  'Biotech Area' : {"type": "equirectangular", "panorama": "./images/Biotech Area.jpg"},
+  'Yamuna Cafe' : {"type": "equirectangular", "panorama": "./images/Yamuna Cafe.jpg"},
+  'Yamuna Gate' : {"type": "equirectangular", "panorama": "./images/Yamuna Gate.jpg"},
+  'The Wall' : {"type": "equirectangular", "panorama": "./images/The Wall.jpg"},
+  'Dean Academic' : {"type": "equirectangular", "panorama": "./images/Dean Academic.jpg"},
+  'Design Centre' : {"type": "equirectangular", "panorama": "./images/Design Centre.jpg"},
+  'Computer Centre' : {"type": "equirectangular", "panorama": "./images/Computer Centre.jpg"},
+  'SVBH Gate' : {"type": "equirectangular", "panorama": "./images/SVBH Gate.jpg","hotSpots": [
+    {
+        "pitch": 0,
+        "yaw": 60,
+        "type": "info",
+        "text": "Computer Science Department",
+        "clickHandlerFunc": function() {changePanorama("Computer Department");}
+    }
+  ]},
+  'Computer Department' : {"type": "equirectangular", "panorama": "./images/Computer Department.jpg", "hotSpots": [
+    {
+        "pitch": 15,
+        "yaw": 180,
+        "type": "info",
+        "text": "Swami Vivekanand Boys Hostel",
+        "clickHandlerFunc": function() {changePanorama("SVBH Gate");}
+    }
+]},
+  'P.G. Girl Hostel' : {"type": "equirectangular", "panorama": "./images/P.G. Girl Hostel.jpg"},
+  'SMS' : {"type": "equirectangular", "panorama": "./images/SMS.jpg"},
+  'NCC Building' : {"type": "equirectangular", "panorama": "./images/NCC Building.jpg"},
+  'Dewsis Cafe' : {"type": "equirectangular", "panorama": "./images/Dewsis Cafe.jpg"},
+  'M.P. Hall' : {"type": "equirectangular", "panorama": "./images/M.P. Hall.jpg"},
+  'Gymkhana Ground' : {"type": "equirectangular", "panorama": "./images/Gymkhana Ground.jpg"},
+  'Boys Hostel' : {"type": "equirectangular", "panorama": "./images/Boys Hostel.jpg"},
+  'COURT 97' : {"type": "equirectangular", "panorama": "./images/COURT 97.jpg"},
+  'Atheletics Ground' : {"type": "equirectangular", "panorama": "./images/Atheletics Ground.jpg"},
+  'WORKSHOP LAB' : {"type": "equirectangular", "panorama": "./images/WORKSHOP LAB.jpg"},
+  'Electrical Department Gate' : {"type": "equirectangular", "panorama": "./images/Electrical Department Gate.jpg"},
+  'I LOVE MNNIT' : {"type": "equirectangular", "panorama": "./images/I LOVE MNNIT.jpg"},
+  'CAFE 96' : {"type": "equirectangular", "panorama": "./images/CAFE 96.jpg"},
+  'CENTRAL LIBRARY' : {"type": "equirectangular", "panorama": "./images/CENTRAL LIBRARY.jpg"},
+  'South Gate Academic Area' : {"type": "equirectangular", "panorama": "./images/South Gate Academic Area.jpg"},
+  'Tilak Hostel Park' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel Park.jpg"},
+  'PATEL GATE' : {"type": "equirectangular", "panorama": "./images/PATEL GATE.jpg"},
+  'Tilak Hostel' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel.jpg"},
+  'Malviya Hostel' : {"type": "equirectangular", "panorama": "./images/Malviya Hostel.jpg"},
+  'SAC' : {"type": "equirectangular", "panorama": "./images/SAC.jpg"},
+  'Tandon Hostel' : {"type": "equirectangular", "panorama": "./images/Tandon Hostel.jpg"},
+  'New Hostel' : {"type": "equirectangular", "panorama": "./images/New Hostel.jpg"},
+  'Tandon Gate' : {"type": "equirectangular", "panorama": "./images/Tandon Gate.jpg"}
+}
+
 
 
 var map = new mapboxgl.Map({
@@ -83,12 +143,9 @@ data.forEach((coordinate) => {
     popup.remove();
   });
 
-
-
   // Add click event listener to each marker
   marker.getElement().addEventListener("click", function () {
     /*
-    
     var panorama = new google.maps.StreetViewPanorama(
       document.getElementById("street-view"),
       {
@@ -98,17 +155,22 @@ data.forEach((coordinate) => {
       }
     );
     */
+  
     document.getElementById("myNav").style.width = "100%";
-    pannellum.viewer('panorama', {
-      "type": "equirectangular",
-      "panorama": "./images/"+locationName+".jpg"
-    });
+    pannellum.viewer('panorama', scenes[locationName]);
   });
 });
 
+const pano = document.getElementById("panorama")
+
+function changePanorama(locationName) {
+  pano.innerHTML= ` `
+  pannellum.viewer('panorama', scenes[locationName]);
+}
 
 const close = document.getElementById("closer");
 close.addEventListener('click', ()=> {
+    pano.innerHTML= ` `
     document.getElementById("myNav").style.width = "0%";
 });
 
