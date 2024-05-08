@@ -55,10 +55,9 @@ body{
   /* Position the content inside the overlay */
   .overlay-content {
     position: absolute;
-    left: 12.5%;
-    top: 12.5%;
-    width: 75%; /* 100% width */
-    height: 75%;
+    align-self: center;
+    width: 1200px; /* 100% width */
+    height: 800px;
   }
   
   /* The navigation links inside the overlay */

@@ -42,23 +42,31 @@ data = [
 ]
 
 scenes = {
-  'Ganga Gate' : {"type": "equirectangular", "panorama": "./images/Ganga Gate.jpg"},
+  'Ganga Gate' : {"type": "equirectangular", "panorama": "./images/Ganga Gate.jpg","autoLoad" : true},
 
-  'STPI Gate' : {"type": "equirectangular", "panorama": "./images/STPI Gate.jpg"}, 
+  'STPI Gate' : {"type": "equirectangular", "panorama": "./images/STPI Gate.jpg","autoLoad" : true}, 
 
-  'Administrative Building'  : {"type": "equirectangular", "panorama": "./images/Administrative Building.jpg"}, 
+  'Administrative Building'  : {"type": "equirectangular", "panorama": "./images/Administrative Building.jpg","autoLoad" : true}, 
 
-  'Mnnit Logo' : {"type": "equirectangular", "panorama": "./images/Mnnit Logo.jpg"},
+  'Mnnit Logo' : {"type": "equirectangular", "panorama": "./images/Mnnit Logo.jpg","autoLoad" : true},
 
-  'Academic Building' : {"type": "equirectangular", "panorama": "./images/Academic Building.jpg"},
-  'Biotech Area' : {"type": "equirectangular", "panorama": "./images/Biotech Area.jpg"},
-  'Yamuna Cafe' : {"type": "equirectangular", "panorama": "./images/Yamuna Cafe.jpg"},
-  'Yamuna Gate' : {"type": "equirectangular", "panorama": "./images/Yamuna Gate.jpg"},
-  'The Wall' : {"type": "equirectangular", "panorama": "./images/The Wall.jpg"},
-  'Dean Academic' : {"type": "equirectangular", "panorama": "./images/Dean Academic.jpg"},
-  'Design Centre' : {"type": "equirectangular", "panorama": "./images/Design Centre.jpg"},
-  'Computer Centre' : {"type": "equirectangular", "panorama": "./images/Computer Centre.jpg"},
-  'SVBH Gate' : {"type": "equirectangular", "panorama": "./images/SVBH Gate.jpg","hotSpots": [
+  'Academic Building' : {"type": "equirectangular", "panorama": "./images/Academic Building.jpg","autoLoad" : true},
+
+  'Biotech Area' : {"type": "equirectangular", "panorama": "./images/Biotech Area.jpg","autoLoad" : true},
+
+  'Yamuna Cafe' : {"type": "equirectangular", "panorama": "./images/Yamuna Cafe.jpg","autoLoad" : true},
+
+  'Yamuna Gate' : {"type": "equirectangular", "panorama": "./images/Yamuna Gate.jpg","autoLoad" : true},
+
+  'The Wall' : {"type": "equirectangular", "panorama": "./images/The Wall.jpg","autoLoad" : true},
+
+  'Dean Academic' : {"type": "equirectangular", "panorama": "./images/Dean Academic.jpg","autoLoad" : true},
+
+  'Design Centre' : {"type": "equirectangular", "panorama": "./images/Design Centre.jpg","autoLoad" : true},
+
+  'Computer Centre' : {"type": "equirectangular", "panorama": "./images/Computer Centre.jpg","autoLoad" : true},
+
+  'SVBH Gate' : {"type": "equirectangular", "panorama": "./images/SVBH Gate.jpg","autoLoad" : true,"hotSpots": [
     {
         "pitch": 0,
         "yaw": 60,
@@ -67,7 +75,8 @@ scenes = {
         "clickHandlerFunc": function() {changePanorama("Computer Department");}
     }
   ]},
-  'Computer Department' : {"type": "equirectangular", "panorama": "./images/Computer Department.jpg", "hotSpots": [
+
+  'Computer Department' : {"type": "equirectangular", "panorama": "./images/Computer Department.jpg","autoLoad" : true, "hotSpots": [
     {
         "pitch": 15,
         "yaw": 180,
@@ -76,29 +85,52 @@ scenes = {
         "clickHandlerFunc": function() {changePanorama("SVBH Gate");}
     }
 ]},
-  'P.G. Girl Hostel' : {"type": "equirectangular", "panorama": "./images/P.G. Girl Hostel.jpg"},
-  'SMS' : {"type": "equirectangular", "panorama": "./images/SMS.jpg"},
-  'NCC Building' : {"type": "equirectangular", "panorama": "./images/NCC Building.jpg"},
-  'Dewsis Cafe' : {"type": "equirectangular", "panorama": "./images/Dewsis Cafe.jpg"},
-  'M.P. Hall' : {"type": "equirectangular", "panorama": "./images/M.P. Hall.jpg"},
-  'Gymkhana Ground' : {"type": "equirectangular", "panorama": "./images/Gymkhana Ground.jpg"},
-  'Boys Hostel' : {"type": "equirectangular", "panorama": "./images/Boys Hostel.jpg"},
-  'COURT 97' : {"type": "equirectangular", "panorama": "./images/COURT 97.jpg"},
-  'Atheletics Ground' : {"type": "equirectangular", "panorama": "./images/Atheletics Ground.jpg"},
-  'WORKSHOP LAB' : {"type": "equirectangular", "panorama": "./images/WORKSHOP LAB.jpg"},
-  'Electrical Department Gate' : {"type": "equirectangular", "panorama": "./images/Electrical Department Gate.jpg"},
-  'I LOVE MNNIT' : {"type": "equirectangular", "panorama": "./images/I LOVE MNNIT.jpg"},
-  'CAFE 96' : {"type": "equirectangular", "panorama": "./images/CAFE 96.jpg"},
-  'CENTRAL LIBRARY' : {"type": "equirectangular", "panorama": "./images/CENTRAL LIBRARY.jpg"},
-  'South Gate Academic Area' : {"type": "equirectangular", "panorama": "./images/South Gate Academic Area.jpg"},
-  'Tilak Hostel Park' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel Park.jpg"},
-  'PATEL GATE' : {"type": "equirectangular", "panorama": "./images/PATEL GATE.jpg"},
-  'Tilak Hostel' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel.jpg"},
-  'Malviya Hostel' : {"type": "equirectangular", "panorama": "./images/Malviya Hostel.jpg"},
-  'SAC' : {"type": "equirectangular", "panorama": "./images/SAC.jpg"},
-  'Tandon Hostel' : {"type": "equirectangular", "panorama": "./images/Tandon Hostel.jpg"},
-  'New Hostel' : {"type": "equirectangular", "panorama": "./images/New Hostel.jpg"},
-  'Tandon Gate' : {"type": "equirectangular", "panorama": "./images/Tandon Gate.jpg"}
+
+  'P.G. Girl Hostel' : {"type": "equirectangular", "panorama": "./images/P.G. Girl Hostel.jpg", "autoLoad":true},
+
+  'SMS' : {"type": "equirectangular", "panorama": "./images/SMS.jpg","autoLoad" : true},
+
+  'NCC Building' : {"type": "equirectangular", "panorama": "./images/NCC Building.jpg","autoLoad" : true},
+
+  'Dewsis Cafe' : {"type": "equirectangular", "panorama": "./images/Dewsis Cafe.jpg","autoLoad" : true},
+
+  'M.P. Hall' : {"type": "equirectangular", "panorama": "./images/M.P. Hall.jpg","autoLoad" : true},
+
+  'Gymkhana Ground' : {"type": "equirectangular", "panorama": "./images/Gymkhana Ground.jpg","autoLoad" : true},
+
+  'Boys Hostel' : {"type": "equirectangular", "panorama": "./images/Boys Hostel.jpg","autoLoad" : true},
+
+  'COURT 97' : {"type": "equirectangular", "panorama": "./images/COURT 97.jpg","autoLoad" : true},
+
+  'Atheletics Ground' : {"type": "equirectangular", "panorama": "./images/Atheletics Ground.jpg","autoLoad" : true},
+
+  'WORKSHOP LAB' : {"type": "equirectangular", "panorama": "./images/WORKSHOP LAB.jpg","autoLoad" : true},
+
+  'Electrical Department Gate' : {"type": "equirectangular", "panorama": "./images/Electrical Department Gate.jpg","autoLoad" : true},
+
+  'I LOVE MNNIT' : {"type": "equirectangular", "panorama": "./images/I LOVE MNNIT.jpg","autoLoad" : true},
+
+  'CAFE 96' : {"type": "equirectangular", "panorama": "./images/CAFE 96.jpg","autoLoad" : true},
+
+  'CENTRAL LIBRARY' : {"type": "equirectangular", "panorama": "./images/CENTRAL LIBRARY.jpg","autoLoad" : true},
+
+  'South Gate Academic Area' : {"type": "equirectangular", "panorama": "./images/South Gate Academic Area.jpg","autoLoad" : true},
+
+  'Tilak Hostel Park' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel Park.jpg","autoLoad" : true},
+
+  'PATEL GATE' : {"type": "equirectangular", "panorama": "./images/PATEL GATE.jpg","autoLoad" : true},
+
+  'Tilak Hostel' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel.jpg","autoLoad" : true},
+
+  'Malviya Hostel' : {"type": "equirectangular", "panorama": "./images/Malviya Hostel.jpg","autoLoad" : true},
+
+  'SAC' : {"type": "equirectangular", "panorama": "./images/SAC.jpg","autoLoad" : true},
+
+  'Tandon Hostel' : {"type": "equirectangular", "panorama": "./images/Tandon Hostel.jpg","autoLoad" : true},
+
+  'New Hostel' : {"type": "equirectangular", "panorama": "./images/New Hostel.jpg","autoLoad" : true},
+  
+  'Tandon Gate' : {"type": "equirectangular", "panorama": "./images/Tandon Gate.jpg","autoLoad" : true}
 }
 
 
