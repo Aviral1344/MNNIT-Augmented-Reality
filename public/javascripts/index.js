@@ -22,7 +22,7 @@ data = [
     [25.491872,81.8660697,"Dewsis Cafe"],
     [25.4922581,81.8663925,"M.P. Hall"],
     [25.4929065,81.8664154,"Gymkhana Ground"],
-    [25.494265,81.8663642,"Boys Hostel"],
+    [25.494265,81.8663642,"Boys Hostel Underpass"],
     [25.4942795,81.8658614,"COURT 97"],
     [25.4943038,81.8646349,"Atheletics Ground"],
     [25.4941223,81.8646656,"WORKSHOP LAB"],
@@ -98,9 +98,46 @@ scenes = {
 
   'Gymkhana Ground' : {"type": "equirectangular", "panorama": "./images/Gymkhana Ground.jpg","autoLoad" : true},
 
-  'Boys Hostel' : {"type": "equirectangular", "panorama": "./images/Boys Hostel.jpg","autoLoad" : true},
+  'Boys Hostel Underpass' : {"type": "equirectangular", "panorama": "./images/Boys Hostel Underpass.jpg","autoLoad" : true, hotSpots : [
+    {
+      "pitch": 0,
+      "yaw": 0,
+      "type": "scene",
+      "text": "court 97",
+      "clickHandlerFunc": function() {changePanorama("COURT 97");}
+    },
+    {
+      "pitch": 0,
+      "yaw": 180,
+      "type": "scene",
+      "text": "Tilak Hostel Park",
+      "clickHandlerFunc": function() {changePanorama("Tilak Hostel Park");}
+    },
+    {
+      "pitch": -2,
+      "yaw": -85,
+      "type": "scene",
+      "text": "Gymkhana Ground",
+      "clickHandlerFunc": function() {changePanorama("Gymkhana Ground");}
+    }
+  ]},
 
-  'COURT 97' : {"type": "equirectangular", "panorama": "./images/COURT 97.jpg","autoLoad" : true},
+  'COURT 97' : {"type": "equirectangular", "panorama": "./images/COURT 97.jpg","autoLoad" : true, "hotSpots": [
+    {
+      "pitch": 0,
+      "yaw": 195,
+      "type": "scene",
+      "text": "Boys Underpass",
+      "clickHandlerFunc": function() {changePanorama("Boys Hostel Underpass");}
+    },
+    {
+      "pitch": -2,
+      "yaw": 15,
+      "type": "scene",
+      "text": "Athletics Ground",
+      "clickHandlerFunc": function() {changePanorama("Atletics Ground");}
+    },
+  ]},
 
   'Atheletics Ground' : {"type": "equirectangular", "panorama": "./images/Atheletics Ground.jpg","autoLoad" : true},
 
@@ -116,21 +153,112 @@ scenes = {
 
   'South Gate Academic Area' : {"type": "equirectangular", "panorama": "./images/South Gate Academic Area.jpg","autoLoad" : true},
 
-  'Tilak Hostel Park' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel Park.jpg","autoLoad" : true},
+  'Tilak Hostel Park' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel Park.jpg","autoLoad" : true, "hotSpots": [
+    {
+      "pitch": -15,
+      "yaw": -55,
+      "type": "scene",
+      "text": "Student Activity Center",
+      "clickHandlerFunc": function() {changePanorama("SAC");}
+    },
+    {
+      "pitch": -1,
+      "yaw": 32,
+      "type": "scene",
+      "text": "Patel Gate",
+      "clickHandlerFunc": function() {changePanorama("PATEL GATE");}
+    },
+    {
+      "pitch": 2,
+      "yaw": 192,
+      "type": "scene",
+      "text": "Boys Underpass",
+      "clickHandlerFunc": function() {changePanorama("Boys Hostel Underpass");}
+    },
+  ]},
 
-  'PATEL GATE' : {"type": "equirectangular", "panorama": "./images/PATEL GATE.jpg","autoLoad" : true},
+  'PATEL GATE' : {"type": "equirectangular", "panorama": "./images/PATEL GATE.jpg","autoLoad" : true, "hotSpots": [
+    {
+      "pitch": -10,
+      "yaw": 0,
+      "type": "scene",
+      "text": "Tilak Hostel Park",
+      "clickHandlerFunc": function() {changePanorama("Tilak Hostel Park");}
+    }
+  ]},
 
   'Tilak Hostel' : {"type": "equirectangular", "panorama": "./images/Tilak Hostel.jpg","autoLoad" : true},
 
-  'Malviya Hostel' : {"type": "equirectangular", "panorama": "./images/Malviya Hostel.jpg","autoLoad" : true},
+  'Malviya Hostel' : {"type": "equirectangular", "panorama": "./images/Malviya Hostel.jpg","autoLoad" : true,"hotSpots": [
+    {
+        "pitch": -15,
+        "yaw": 10,
+        "type": "scene",
+        "text": "Tandon Hostel",
+        "clickHandlerFunc": function() {changePanorama("Tandon Hostel");}
+    }
+  ]},
 
-  'SAC' : {"type": "equirectangular", "panorama": "./images/SAC.jpg","autoLoad" : true},
+  'SAC' : {"type": "equirectangular", "panorama": "./images/SAC.jpg","autoLoad" : true,"hotSpots": [
+    {
+      "pitch": 7,
+      "yaw": 160,
+      "type": "scene",
+      "text": "Tandon Hostel",
+      "clickHandlerFunc": function() {changePanorama("Tandon Hostel");}
+    },
+    {
+      "pitch": -10,
+      "yaw": -60,
+      "type": "scene",
+      "text": "Tilak Hostel",
+      "clickHandlerFunc": function() {changePanorama("Tilak Hostel");}
+  },
+  {
+    "pitch": -4,
+    "yaw": 5,
+    "type": "scene",
+    "text": "Towards Campus",
+    "clickHandlerFunc": function() {changePanorama("Tilak Hostel Park");}
+  }
+  ]},
 
-  'Tandon Hostel' : {"type": "equirectangular", "panorama": "./images/Tandon Hostel.jpg","autoLoad" : true},
+  'Tandon Hostel' : {"type": "equirectangular", "panorama": "./images/Tandon Hostel.jpg","autoLoad" : true,"hotSpots": [
+    {
+        "pitch": 12,
+        "yaw": 188,
+        "type": "scene",
+        "text": "Malviya Hostel",
+        "clickHandlerFunc": function() {changePanorama("Malviya Hostel");}
+    },
+    {
+      "pitch": 0,
+      "yaw": 270,
+      "type": "scene",
+      "text": "SAC",
+      "clickHandlerFunc": function() {changePanorama("SAC");}
+  }
+  ]},
 
-  'New Hostel' : {"type": "equirectangular", "panorama": "./images/New Hostel.jpg","autoLoad" : true},
-  
-  'Tandon Gate' : {"type": "equirectangular", "panorama": "./images/Tandon Gate.jpg","autoLoad" : true}
+  'New Hostel' : {"type": "equirectangular", "panorama": "./images/New Hostel.jpg","autoLoad" : true,"hotSpots": [
+    {
+        "pitch": 10,
+        "yaw": 190,
+        "type": "scene",
+        "text": "Tandon Gate",
+        "clickHandlerFunc": function() {changePanorama("Tandon Gate");}
+    }
+  ]},
+
+  'Tandon Gate' : {"type": "equirectangular", "panorama": "./images/Tandon Gate.jpg","autoLoad" : true,"hotSpots": [
+    {
+        "pitch": 0,
+        "yaw": 240,
+        "type": "info",
+        "text": "New Hostel",
+        "clickHandlerFunc": function() {changePanorama("New Hostel");}
+    }
+  ]}
 }
 
 
