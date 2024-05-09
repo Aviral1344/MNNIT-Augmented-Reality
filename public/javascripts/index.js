@@ -46,7 +46,7 @@ scenes = {
     {
         "pitch": -12,
         "yaw": 10,
-        "type": "info",
+        "type": "scene",
         "text": "STPI Gate",
         "clickHandlerFunc": function() {changePanorama("STPI Gate");}
     }
@@ -56,21 +56,21 @@ scenes = {
     {
         "pitch": -10,
         "yaw": -5,
-        "type": "info",
+        "type": "scene",
         "text": "The Wall",
         "clickHandlerFunc": function() {changePanorama("The Wall");}
     },
     {
         "pitch": 16,
         "yaw": 190,
-        "type": "info",
+        "type": "scene",
         "text": "Ganga Gate",
         "clickHandlerFunc": function() {changePanorama("Ganga Gate");}
     },
     {
         "pitch": -10,
         "yaw": -70,
-        "type": "info",
+        "type": "scene",
         "text": "Administrative Building",
         "clickHandlerFunc": function() {changePanorama("Administrative Building");}
     }
@@ -80,21 +80,21 @@ scenes = {
    /* {
         "pitch": 0,
         "yaw": 40,
-        "type": "info",
+        "type": "scene",
         "text": "The Wall",
         "clickHandlerFunc": function() {changePanorama("The Wall");}
     },
     {
         "pitch": 0,
         "yaw": 30,
-        "type": "info",
+        "type": "scene",
         "text": "Academic Building",
         "clickHandlerFunc": function() {changePanorama("Academic Building");}
     },*/
     {
         "pitch": -10,
         "yaw": -50,
-        "type": "info",
+        "type": "scene",
         "text": "Mnnit Logo",
         "clickHandlerFunc": function() {changePanorama("Mnnit Logo");}
     }
@@ -104,7 +104,7 @@ scenes = {
     {
         "pitch": 0,
         "yaw": 30,
-        "type": "info",
+        "type": "scene",
         "text": "Yamuna Gate",
         "clickHandlerFunc": function() {changePanorama("Yamuna Gate");}
     },
@@ -112,7 +112,7 @@ scenes = {
     {
         "pitch": 15,
         "yaw": 90,
-        "type": "info",
+        "type": "scene",
         "text": "Administrative Building",
         "clickHandlerFunc": function() {changePanorama("Administrative Building");}
     }
@@ -122,21 +122,21 @@ scenes = {
     {
         "pitch": 0,
         "yaw": -90,
-        "type": "info",
+        "type": "scene",
         "text": "Biotech Area",
         "clickHandlerFunc": function() {changePanorama("Biotech Area");}
     },
     {
       "pitch": 8,
       "yaw": 80,
-      "type": "info",
+      "type": "scene",
       "text": "The Wall",
       "clickHandlerFunc": function() {changePanorama("The Wall");}
   },
     {
       "pitch": 10,
       "yaw": 210,
-      "type": "info",
+      "type": "scene",
       "text": "Administrative Building",
       "clickHandlerFunc": function() {changePanorama("Administrative Building");}
   }
@@ -146,21 +146,21 @@ scenes = {
     {
         "pitch": -5,
         "yaw": 30,
-        "type": "info",
+        "type": "scene",
         "text": "Yamuna Cafe",
         "clickHandlerFunc": function() {changePanorama("Yamuna Cafe");}
     },
     {
         "pitch": -10,
         "yaw": -20,
-        "type": "info",
+        "type": "scene",
         "text": "Academic Building",
         "clickHandlerFunc": function() {changePanorama("Academic Building");}
     },
     {
         "pitch": 10,
         "yaw": 205,
-        "type": "info",
+        "type": "scene",
         "text": "Atheletics Ground",
         "clickHandlerFunc": function() {changePanorama("Atheletics Ground");}
     }
@@ -170,7 +170,7 @@ scenes = {
     {
         "pitch": 5,
         "yaw": 5,
-        "type": "info",
+        "type": "scene",
         "text": "Yamuna Gate",
         "clickHandlerFunc": function() {changePanorama("Yamuna Gate");}
     },
@@ -178,7 +178,7 @@ scenes = {
     {
         "pitch": 5,
         "yaw": 180,
-        "type": "info",
+        "type": "scene",
         "text": "Biotech Area",
         "clickHandlerFunc": function() {changePanorama("Biotech Area");}
     }
@@ -188,7 +188,7 @@ scenes = {
     {
         "pitch": 0,
         "yaw": 50,
-        "type": "info",
+        "type": "scene",
         "text": "Mnnit Logo",
         "clickHandlerFunc": function() {changePanorama("Mnnit Logo");}
     },
@@ -196,7 +196,7 @@ scenes = {
     {
         "pitch": 0,
         "yaw": 60,
-        "type": "info",
+        "type": "scene",
         "text": "Administrative Building",
         "clickHandlerFunc": function() {changePanorama("Administrative Building");}
     }
@@ -206,31 +206,38 @@ scenes = {
     {
         "pitch": 20,
         "yaw": 150,
-        "type": "info",
+        "type": "scene",
         "text": "STPI Gate",
         "clickHandlerFunc": function() {changePanorama("STPI Gate");}
     },
     {
         "pitch": -10,
         "yaw": -105,
-        "type": "info",
+        "type": "scene",
         "text": "Academic Building",
         "clickHandlerFunc": function() {changePanorama("Academic Building");}
     },
     {
       "pitch": -7,
       "yaw": 20,
-      "type": "info",
+      "type": "scene",
       "text": "Dean Academic",
       "clickHandlerFunc": function() {changePanorama("Dean Academic");}
-  }
+  },
+  {
+    "pitch": -20,
+    "yaw": -30,
+    "type": "scene",
+    "text": "South Gate Academic Area",
+    "clickHandlerFunc": function() {changePanorama("South Gate Academic Area");}
+}
   ]},
 
   'Dean Academic' : {"type": "equirectangular", "panorama": "./images/Dean Academic.jpg","autoLoad" : true,"hotSpots": [
     {
-        "pitch": 0,
-        "yaw": 40,
-        "type": "info",
+        "pitch": 10,
+        "yaw": 200,
+        "type": "scene",
         "text": "The Wall",
         "clickHandlerFunc": function() {changePanorama("The Wall");}
     },
@@ -238,7 +245,7 @@ scenes = {
     {
         "pitch": 0,
         "yaw": 60,
-        "type": "info",
+        "type": "scene",
         "text": "Design Centre",
         "clickHandlerFunc": function() {changePanorama("Design Centre");}
     }
@@ -248,7 +255,7 @@ scenes = {
     {
         "pitch": 15,
         "yaw": 190,
-        "type": "info",
+        "type": "scene",
         "text": "Dean Academic",
         "clickHandlerFunc": function() {changePanorama("Dean Academic");}
     },
@@ -256,7 +263,7 @@ scenes = {
     {
         "pitch": -15,
         "yaw": 5,
-        "type": "info",
+        "type": "scene",
         "text": "Computer Centre",
         "clickHandlerFunc": function() {changePanorama("Computer Centre");}
     }
@@ -266,7 +273,7 @@ scenes = {
     {
         "pitch": 0,
         "yaw": 180,
-        "type": "info",
+        "type": "scene",
         "text": "Design Centre",
         "clickHandlerFunc": function() {changePanorama("Design Centre");}
     },
@@ -274,7 +281,7 @@ scenes = {
     {
         "pitch": -10,
         "yaw": 0,
-        "type": "info",
+        "type": "scene",
         "text": "SVBH Gate",
         "clickHandlerFunc": function() {changePanorama("SVBH Gate");}
     }
@@ -284,14 +291,14 @@ scenes = {
     {
         "pitch": 0,
         "yaw": 60,
-        "type": "info",
+        "type": "scene",
         "text": "Computer Science Department",
         "clickHandlerFunc": function() {changePanorama("Computer Department");}
     },
     {
       "pitch": -10,
       "yaw": 5,
-      "type": "info",
+      "type": "scene",
       "text": "Computer centre",
       "clickHandlerFunc": function() {changePanorama("Computer centre");}
   }
@@ -301,14 +308,14 @@ scenes = {
     {
         "pitch": 15,
         "yaw": 160,
-        "type": "info",
+        "type": "scene",
         "text": "Swami Vivekanand Boys Hostel",
         "clickHandlerFunc": function() {changePanorama("SVBH Gate");}
     },
     {
       "pitch": -5,
       "yaw": 20,
-      "type": "info",
+      "type": "scene",
       "text": "P.G. girl Hostel",
       "clickHandlerFunc": function() {changePanorama("P.G. girl Hostel");}
   }
@@ -318,14 +325,14 @@ scenes = {
     {
         "pitch": 10,
         "yaw": 195,
-        "type": "info",
+        "type": "scene",
         "text": "Computer Department",
         "clickHandlerFunc": function() {changePanorama("Computer Department");}
     },
     {
       "pitch": -3,
       "yaw": 28,
-      "type": "info",
+      "type": "scene",
       "text": "School Of Managemnet",
       "clickHandlerFunc": function() {changePanorama("SMS");}
   }
@@ -335,14 +342,14 @@ scenes = {
     {
         "pitch": -10,
         "yaw": 0,
-        "type": "info",
+        "type": "scene",
         "text": "Cafe 96",
         "clickHandlerFunc": function() {changePanorama("CAFE 96");}
     },
     {
       "pitch": 10,
       "yaw": 185,
-      "type": "info",
+      "type": "scene",
       "text": "P.G. girl Hostel",
       "clickHandlerFunc": function() {changePanorama("P.G. girl Hostel");}
   }
@@ -352,21 +359,21 @@ scenes = {
     {
         "pitch": -10,
         "yaw": -10,
-        "type": "info",
+        "type": "scene",
         "text": "Cafe 96",
         "clickHandlerFunc": function() {changePanorama("CAFE 96");}
     },
     {
         "pitch": 0,
         "yaw": 50,
-        "type": "info",
+        "type": "scene",
         "text": "Dewsis Cafe",
         "clickHandlerFunc": function() {changePanorama("Dewsis Cafe");}
     },
     {
       "pitch": 10,
       "yaw": 170,
-      "type": "info",
+      "type": "scene",
       "text": "School Of Management",
       "clickHandlerFunc": function() {changePanorama("SMS");}
   }
@@ -376,21 +383,21 @@ scenes = {
     {
         "pitch": -10,
         "yaw": -100,
-        "type": "info",
+        "type": "scene",
         "text": "M.P. Hall",
         "clickHandlerFunc": function() {changePanorama("M.P. Hall");}
     },
     {
         "pitch": 15,
         "yaw": 185,
-        "type": "info",
+        "type": "scene",
         "text": "NCC",
         "clickHandlerFunc": function() {changePanorama("NCC Building");}
     },
     {
       "pitch":-10,
       "yaw": -10,
-      "type": "info",
+      "type": "scene",
       "text": "Gymkhana Ground",
       "clickHandlerFunc": function() {changePanorama("Gymkhana Ground");}
   }
@@ -400,21 +407,21 @@ scenes = {
     {
         "pitch": 15,
         "yaw": 20,
-        "type": "info",
+        "type": "scene",
         "text": "I LOVE MNNIT",
         "clickHandlerFunc": function() {changePanorama("I LOVE MNNIT");}
     },
     {
         "pitch": 15,
         "yaw": 60,
-        "type": "info",
+        "type": "scene",
         "text": "Dewsis Cafe",
         "clickHandlerFunc": function() {changePanorama("Dewsis Cafe");}
     },
     {
       "pitch": 15,
       "yaw": 40,
-      "type": "info",
+      "type": "scene",
       "text": "Gymkhana Ground",
       "clickHandlerFunc": function() {changePanorama("Gymkhana Ground");}
   }
@@ -425,14 +432,14 @@ scenes = {
     {
         "pitch": 0,
         "yaw": 190,
-        "type": "info",
+        "type": "scene",
         "text": "M.P. Hall",
         "clickHandlerFunc": function() {changePanorama("M.P. Hall");}
     },
     {
       "pitch": -5,
       "yaw": 10,
-      "type": "info",
+      "type": "scene",
       "text": "Boys Hostel",
       "clickHandlerFunc": function() {changePanorama("Boy Hostel");}
   }
@@ -442,7 +449,7 @@ scenes = {
     {
         "pitch": 15,
         "yaw": 20,
-        "type": "info",
+        "type": "scene",
         "text": "COURT 97",
         "clickHandlerFunc": function() {changePanorama("COURT 97");}
     },
@@ -450,14 +457,14 @@ scenes = {
       
         "pitch": 15,
         "yaw": 60,
-        "type": "info",
+        "type": "scene",
         "text": "Tilak Hostel Park",
         "clickHandlerFunc": function() {changePanorama("Tilak Hostel Park");}
     },
     {
       "pitch": 15,
       "yaw": 40,
-      "type": "info",
+      "type": "scene",
       "text": "Gymkhana Ground",
       "clickHandlerFunc": function() {changePanorama("Gymkhana Ground");}
   }
@@ -467,14 +474,14 @@ scenes = {
     {
         "pitch": 15,
         "yaw": 30,
-        "type": "info",
+        "type": "scene",
         "text": "Atheletics Ground",
         "clickHandlerFunc": function() {changePanorama("Atheletics Ground");}
     },
     {
         "pitch": 15,
         "yaw": 60,
-        "type": "info",
+        "type": "scene",
         "text": "Boys Hostel",
         "clickHandlerFunc": function() {changePanorama("Boys Hostel");}
     }
@@ -484,21 +491,21 @@ scenes = {
     {
         "pitch": 15,
         "yaw": 20,
-        "type": "info",
+        "type": "scene",
         "text": "COURT 97",
         "clickHandlerFunc": function() {changePanorama("COURT 97");}
     },
     {
         "pitch": 15,
         "yaw": 60,
-        "type": "info",
+        "type": "scene",
         "text": "WORKSHOP LAB",
         "clickHandlerFunc": function() {changePanorama("WORKSHOP LAB");}
     },
     {
       "pitch": 15,
       "yaw": 40,
-      "type": "info",
+      "type": "scene",
       "text": "Biotech Area",
       "clickHandlerFunc": function() {changePanorama("Biotech Area");}
   }
@@ -508,14 +515,14 @@ scenes = {
     {
         "pitch": 5,
         "yaw": 200,
-        "type": "info",
+        "type": "scene",
         "text": "Electrical Department Gate",
         "clickHandlerFunc": function() {changePanorama("Electrical Department Gate");}
     },
     {
         "pitch": -15,
         "yaw": 0,
-        "type": "info",
+        "type": "scene",
         "text": "Atheletics Ground",
         "clickHandlerFunc": function() {changePanorama("Atheletics Ground");}
     }
@@ -525,14 +532,14 @@ scenes = {
     {
         "pitch": -10,
         "yaw": 8,
-        "type": "info",
+        "type": "scene",
         "text": "WORKSHOP LAB",
         "clickHandlerFunc": function() {changePanorama("WORKSHOP LAB");}
     },
     {
         "pitch": 10,
         "yaw": 190,
-        "type": "info",
+        "type": "scene",
         "text": "I LOVE MNNIT",
         "clickHandlerFunc": function() {changePanorama("I LOVE MNNIT");}
     }
@@ -542,35 +549,35 @@ scenes = {
     {
         "pitch": 2,
         "yaw": 189,
-        "type": "info",
+        "type": "scene",
         "text": "CAFE 96",
         "clickHandlerFunc": function() {changePanorama("CAFE 96");}
     },
     {
       "pitch": -17,
       "yaw": 5,
-      "type": "info",
+      "type": "scene",
       "text": "Electrical Department Gate",
       "clickHandlerFunc": function() {changePanorama("Electrical Department Gate");}
   },
   {
     "pitch": 0,
     "yaw": 87,
-    "type": "info",
+    "type": "scene",
     "text": "Gymkhana Ground",
     "clickHandlerFunc": function() {changePanorama("Gymkhana Ground");}
 },
 {
   "pitch": 5,
   "yaw": 95,
-  "type": "info",
+  "type": "scene",
   "text": "M.P. Hall",
   "clickHandlerFunc": function() {changePanorama("M.P. Hall");}
 },
     {
       "pitch": -10,
       "yaw": -80,
-      "type": "info",
+      "type": "scene",
       "text": "CENTRAL LIBRARY",
       "clickHandlerFunc": function() {changePanorama("CENTRAL LIBRARY");}
   }
@@ -578,9 +585,9 @@ scenes = {
 
   'CAFE 96' : {"type": "equirectangular", "panorama": "./images/CAFE 96.jpg","autoLoad" : true, "hotSpots": [
     {
-        "pitch": -11,
-        "yaw": 0,
-        "type": "info",
+        "pitch": -15,
+        "yaw": 25,
+        "type": "scene",
         "text": "I LOVE MNNIT",
         "clickHandlerFunc": function() {changePanorama("I LOVE MNNIT");}
     },
@@ -588,7 +595,7 @@ scenes = {
       "pitch": 15,
 
       "yaw": 185,
-      "type": "info",
+      "type": "scene",
       "text": "School of Management",
       "clickHandlerFunc": function() {changePanorama("SMS");}
   }
@@ -638,14 +645,14 @@ scenes = {
     {
         "pitch": -14,
         "yaw": 3,
-        "type": "info",
+        "type": "scene",
         "text": "I LOVE MNNIT",
         "clickHandlerFunc": function() {changePanorama("I LOVE MNNIT");}
     },
     {
       "pitch": 15,
       "yaw": 190,
-      "type": "info",
+      "type": "scene",
       "text": "South Gate Academic Area",
       "clickHandlerFunc": function() {changePanorama("South Gate Academic Area");}
   }
@@ -655,14 +662,14 @@ scenes = {
     {
         "pitch": -15,
         "yaw": 2,
-        "type": "info",
+        "type": "scene",
         "text": "CENTRAL LIBRARY",
         "clickHandlerFunc": function() {changePanorama("CENTRAL LIBRARY");}
     },
     {
       "pitch": 10,
       "yaw": 190,
-      "type": "info",
+      "type": "scene",
       "text": "The Wall",
       "clickHandlerFunc": function() {changePanorama("The Wall");}
   }
@@ -769,7 +776,7 @@ scenes = {
   {
       "pitch": 0,
       "yaw": 240,
-      "type": "info",
+      "type": "scene",
       "text": "New Hostel",
       "clickHandlerFunc": function() {changePanorama("New Hostel");}
   }
